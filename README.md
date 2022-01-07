@@ -5,8 +5,6 @@
   <b>🤖 Sᴘɪᴅᴇʀ Mᴀɴ</b>
 </h1>
 
-# Deploy To Heroku
-
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/BXBotz2021/Spider-Man)
 
 ## Features
