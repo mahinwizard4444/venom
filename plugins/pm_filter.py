@@ -527,6 +527,24 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "infohelp":
+        buttons = [[
+            InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='extra')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.INFO_TXT,
+            reply_markup=reply_markup
+        )
+    elif query.data == "fstore":
+        buttons = [[
+            InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='extra')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.FSTORE_TXT,
+            reply_markup=reply_markup
+        )
     elif query.data == "stats":
         buttons = [[
             InlineKeyboardButton('🔙 ʙᴀᴄᴋ', callback_data='help'),
