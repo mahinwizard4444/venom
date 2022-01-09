@@ -118,7 +118,7 @@ This module only works for my admins
 👤 Name - {}
 """
 
-    INFO_TEXT = """**👤 User Information**
+    INFO_TXT = """**👤 User Information**
 
 __A Module To Fetch Telegram User Info__
 
@@ -131,7 +131,7 @@ __A Module To Fetch Telegram User Info__
 **⚠️ Note :** __This Commands Be Used In PM's And Groups__
 """
 
-    FSTORE_TEXT = """**📁 File Store**
+    FSTORE_TXT = """**📁 File Store**
 
 __A Module To Get Sharable Link For Any Telegram Media__ 
 
