@@ -13,7 +13,7 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-@Client.on_message(filters.command('link') & filters.user(ADMINS))
+@Client.on_message(filters.command('link'))
 async def gen_link_s(bot, message):
     replied = message.reply_to_message
     if not replied:
@@ -25,7 +25,7 @@ async def gen_link_s(bot, message):
     await message.reply(f"Here is your Link:\nhttps://t.me/{temp.U_NAME}?start={file_id}")
     
     
-@Client.on_message(filters.command('batch') & filters.user(ADMINS))
+@Client.on_message(filters.command('batch'))
 async def gen_link_batch(bot, message):
     if " " not in message.text:
         return await message.reply("Use correct format.\nExample <code>/batch https://t.me/BX_Botz/333 https://t.me/BX_Botz/338</code>.")
