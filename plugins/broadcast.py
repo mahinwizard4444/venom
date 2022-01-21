@@ -4,7 +4,7 @@ import datetime
 import time
 from database.users_chats_db import db
 from info import ADMINS
-from utils import broadcast_messages
+from utils import broadcast_messages, broadcast_messages_group
 import asyncio
         
 @Client.on_message(filters.command("broadcast") & filters.user(ADMINS) & filters.reply)
@@ -54,7 +54,7 @@ async def broadcast_group(bot, message):
 
     success = 0
     async for group in groupd:
-        pti, sh = await broadcast_messages(int(group['id']), b_msg)
+        pti, sh = await broadcast_messages_group(int(group['id']), b_msg)
         if pti:
             success += 1
         elif sh == "Error":
