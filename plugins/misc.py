@@ -127,7 +127,7 @@ async def who_is(client, message):
         )
     await status_message.delete()
 
-@Client.on_message(filters.command(["imdb", 'search']))
+@Client.on_message(filters.private & filters.command(["imdb", 'search']))
 async def imdb_search(client, message):
     if ' ' in message.text:
         k = await message.reply('Searching ImDB')
@@ -138,7 +138,7 @@ async def imdb_search(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{movie.get('title')} - {movie.get('year')}",
+                    text=f"🎬 {movie.get('title')} - {movie.get('year')}",
                     callback_data=f"imdb#{movie.movieID}",
                 )
             ]
