@@ -1,6 +1,5 @@
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import Message
-from rose import app
 from requests import get
 import os
 import requests
@@ -12,7 +11,7 @@ caption = """
 Made With ❤ BY @BX_Botz**
     """
 #logo creator
-@app.on_message(filters.command("logo"))
+@Client.on_message(filters.command("logo"))
 async def on_off_antiarab(_, message: Message):
     text = message.text.split(None, 1)[1]
     photo = get(f"https://single-developers.herokuapp.com/logo?name={text}").history[1].url
@@ -29,7 +28,7 @@ async def on_off_antiarab(_, message: Message):
     )
 
 #hq logo creator
-@app.on_message(filters.command("logohq"))
+@Client.on_message(filters.command("logohq"))
 async def on_off_antiarab(_, message: Message):
     text = message.text.split(None, 1)[1]
     photo = get(f"https://api.single-developers.software/logohq?name={text}").history[1].url
@@ -46,7 +45,7 @@ async def on_off_antiarab(_, message: Message):
     )
 
 #handwrite
-@app.on_message(filters.command("write"))
+@Client.on_message(filters.command("write"))
 async def on_off_antiarab(_, message: Message):
     text = message.text.split(None, 1)[1]
     API = "https://api.single-developers.software/write"
