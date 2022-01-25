@@ -14,7 +14,7 @@ Made With ❤ BY @BX_Botz**
 async def on_off_antiarab(_, message: Message):
     text = message.text.split(None, 1)[1]
     photo = get(f"https://single-developers.herokuapp.com/logo?name={text}").history[1].url
-    await Client.send_photo(message.chat.id, photo=photo, caption =caption.format(message.from_user.mention),
+    await Client.send_photo(chat_id=message.chat.id, photo=photo, caption =caption.format(message.from_user.mention),
                  reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -31,7 +31,7 @@ async def on_off_antiarab(_, message: Message):
 async def on_off_antiarab(_, message: Message):
     text = message.text.split(None, 1)[1]
     photo = get(f"https://api.single-developers.software/logohq?name={text}").history[1].url
-    await Client.send_photo(message.chat.id, photo=photo, caption =caption.format(message.from_user.mention),
+    await Client.send_photo(chat_id=message.chat.id, photo=photo, caption =caption.format(message.from_user.mention),
                  reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -53,7 +53,7 @@ async def on_off_antiarab(_, message: Message):
     }
     req = requests.post(API, headers={'Content-Type': 'application/json'}, json=body)
     img = req.history[1].url
-    await Client.send_photo(message.chat.id, photo=img, caption =caption.format(message.from_user.mention),
+    await Client.send_photo(chat_id=message.chat.id, photo=img, caption =caption.format(message.from_user.mention),
                  reply_markup=InlineKeyboardMarkup(
             [
                 [
