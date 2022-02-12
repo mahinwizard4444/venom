@@ -1,4 +1,5 @@
-from pyrogram import Client, filters
+from pyrogram import filters
+from pyrogram import Client as app
 from pyrogram.types import Message
 from requests import get
 import os
