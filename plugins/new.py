@@ -79,7 +79,7 @@ async def logo(client, message):
 
 #hq logo creator
 @app.on_message(filters.command("logohq"))
-async def on_off_antiarab(_, message: Message):
+async def logohq(_, message: Message):
     try:
         await message._client.get_chat_member(int("-1001579186154"), message.from_user.id)
     except UserNotParticipant:
@@ -104,7 +104,7 @@ async def on_off_antiarab(_, message: Message):
     await m.delete()
 #handwrite
 @app.on_message(filters.command("write"))
-async def on_off_antiarab(_, message: Message):
+async def write(_, message: Message):
     try:
         await message._client.get_chat_member(int("-1001579186154"), message.from_user.id)
     except UserNotParticipant:
@@ -134,7 +134,7 @@ async def on_off_antiarab(_, message: Message):
     await m.delete()
 #wallpaper
 @app.on_message(filters.command("wall"))
-async def on_off_antiarab(_, message: Message):
+async def wall(_, message: Message):
     try:
         await message._client.get_chat_member(int("-1001579186154"), message.from_user.id)
     except UserNotParticipant:
@@ -159,7 +159,7 @@ async def on_off_antiarab(_, message: Message):
     await m.delete()
 #slogo
 @app.on_message(filters.command("slogo"))
-async def on_off_antiarab(_, message: Message):
+async def slogo(_, message: Message):
     try:
         await message._client.get_chat_member(int("-1001579186154"), message.from_user.id)
     except UserNotParticipant:
@@ -189,17 +189,3 @@ async def on_off_antiarab(_, message: Message):
     )
     await m.delete()
 
-__MODULE__ = "Logo-Tools"
-__HELP__ = """
-**Create Beautiful logos for your profile pictures from Rose.**
-×  /logo [TEXT]: Create a logo 
-×  /logohq [TEXT]: Create a HQ logo 
-×  /write [TEXT] : hand writer
-×  /wall [TEXT] : search wallpapers
-×  /slogo [TEXT] : New Beautiful trending logo
-
-[More Info Click Here](https://t.me/szteambots/875)
-
-Logo Maker is Powered by @SingleDevelopers & @MrItzme
- """
-__advtools__ = __HELP__
