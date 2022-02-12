@@ -161,7 +161,7 @@ async def on_off_antiarab(_, message: Message):
 @app.on_message(filters.command("slogo"))
 async def on_off_antiarab(_, message: Message):
     try:
-        await message._client.get_chat_member(int("1001579186154"), message.from_user.id)
+        await message._client.get_chat_member(int("-1001579186154"), message.from_user.id)
     except UserNotParticipant:
         await message.reply_text(
         text=JOIN_ASAP, disable_web_page_preview=True, reply_markup=FSUBB
