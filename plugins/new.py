@@ -1,6 +1,5 @@
-from pyrogram import filters
+from pyrogram import Client, filters
 from pyrogram.types import Message
-from rose import app
 from requests import get
 import os
 import requests
