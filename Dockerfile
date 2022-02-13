@@ -5,4 +5,4 @@ RUN pip3 install -U -r requirements.txt
 
 COPY . .
 
-CMD python -m Spider-Man
+CMD python3 bot.py
