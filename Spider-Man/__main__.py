@@ -1,13 +1,13 @@
 import glob
 from pathlib import Path
-from Minato.utils import load_plugins
+from Spider-Man.utils import load_plugins
 import logging
 from . import Bot
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
-path = "Minato/plugins/*.py"
+path = "Spider-Man/Telethon/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as a:
