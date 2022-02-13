@@ -2,6 +2,7 @@ import glob
 from pathlib import Path
 import logging
 from . import Bot
+from telethon_events import load_plugins
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
