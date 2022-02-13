@@ -1,4 +1,4 @@
-from Minato import Bot
+from Spider-Man import Bot
 from telethon import events
 
 def register(**args):
