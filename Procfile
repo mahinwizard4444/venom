@@ -1,1 +1,1 @@
-worker: python3 bot.py
+worker: python -m Spider-Man
