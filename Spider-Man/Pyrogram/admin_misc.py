@@ -1,7 +1,7 @@
 import os
 from pyrogram import filters
 from pyrogram import Client as app
-from plugins.helper.permissions import adminsOnly
+from Spider-Man.Pyrogram.helper.permissions import adminsOnly
 
 __MODULE__ = "Group"
 __HELP__ = """
