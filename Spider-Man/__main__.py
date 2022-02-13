@@ -1,6 +1,5 @@
 import glob
 from pathlib import Path
-from Spider-Man.utils import load_plugins
 import logging
 from . import Bot
 
