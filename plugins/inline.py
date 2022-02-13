@@ -96,38 +96,3 @@ def get_reply_markup(query):
         ]
         ]
     return InlineKeyboardMarkup(buttons)
-
-
-async def inlineX1(bot, update, searche):
-
-          answers = []
-          search_ts = searche
-          query = search_ts.split(" ", 1)[-1]
-          torrentList = await SearchYTS(query)
-          if not torrentList:
-              answers.append(InlineQueryResultArticle(title="No Torrents Found in ThePirateBay!",
-              description=f"Can't find torrents for {query} in ThePirateBay !!",
-              input_message_content=InputTextMessageContent(
-              message_text=f"No Torrents Found For `{query}` in ThePirateBay !!", parse_mode="Markdown"),
-              reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("Try Again", switch_inline_query_current_chat="1 ") ] ] ) ) )
-          else:
-              for i in range(len(torrentList)):
-                  dl_links = "- " + "\n\n- ".join(torrentList[i]['Downloads'] )
-                  answers.append(InlineQueryResultArticle(title=f"name",
-                  description=f"Language: English\nLikes: 5, Rating: none",
-                  input_message_content=InputTextMessageContent(
-                  message_text=f"**Genre:** a"
-                               f"**Torrent Download Links:",
-                               parse_mode="Markdown", disable_web_page_preview=True),
-                  reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton("Search Again", switch_inline_query_current_chat="1 ") ] ] ),
-                  thumb_url=torrentList[i]["Poster"] ) )
-          try:
-              await update.answer(results=answers, cache_time=0)
-          except QueryIdInvalid:
-              await asyncio.sleep(5)
-          try:
-              await update.answer(results=answers, cache_time=0,
-              switch_pm_text="Error: Search timed out!",
-              switch_pm_parameter="start",)
-          except QueryIdInvalid:
-              pass
