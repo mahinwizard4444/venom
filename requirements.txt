@@ -10,4 +10,4 @@ bs4
 imdbpy
 pillow
 telethon
-decouple
+python-decouple
