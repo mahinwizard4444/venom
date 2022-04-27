@@ -5,11 +5,11 @@
   <b>🤖 Sᴘɪᴅᴇʀ Mᴀɴ</b>
 </h1>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Mufaz-TG/Spider-Man)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/bxbotz2021/Spider-Man)
 
 ## Features
 
-- [x] Auto Filter
+- [x] Auto Filter oi
 - [x] Manual Filter
 - [x] IMDB
 - [x] Admin Commands
