@@ -25,10 +25,9 @@ class script(object):
 """
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
-- Filter is the feature were users can set automated replies for a particular keyword and Spider Man will respond whenever a keyword is found the message
-
+- Filter is the feature were users can set automated replies for a particular keyword and 
 <b>NOTE:</b>
-1. Spider Man should have admin privillage.
+1. Flash should have admin privillage.
 2. only admins can add filters in a chat.
 3. alert buttons have a limit of 64 characters.
 
@@ -39,11 +38,11 @@ class script(object):
 • /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
     BUTTON_TXT = """Help: <b>Buttons</b>
 
-- Spider Man Supports both url and alert inline buttons.
+- Flash Supports both url and alert inline buttons.
 
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. Spider Man supports buttons with any telegram media type.
+2. Flash supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format
 
 <b>URL buttons:</b>
@@ -75,8 +74,7 @@ class script(object):
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
-these are the extra features of Spider Man
-
+these are the extra features of Flash
 <b>Commands and Usage:</b>
 • /id - <code>get id of a specifed user.</code>
 • /info  - <code>get information about a user.</code>
