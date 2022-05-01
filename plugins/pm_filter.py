@@ -30,6 +30,11 @@ FILTER_MODE = {}
 SEND_CHANNEL = int(os.environ.get("SEND_CHANNEL"))
 SEND_USERNAME = os.environ.get("USERNAME")
 
+MOVIE_BTNSS = InlineKeyboardMarkup(
+           [[
+           InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="https://t.me/BX_Botz")
+           ]])
+
 @Client.on_message(filters.command('autofilter'))
 async def fil_mod(client, message):
       mode_on = ["yes", "on", "true"]
@@ -859,10 +864,3 @@ async def manual_filters(client, message, text=False):
                 break
     else:
         return False
-
-
-
-MOVIE_BTNSS = InlineKeyboardMarkup(
-           [[
-           InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="https://t.me/BX_Botz")
-           ]])
