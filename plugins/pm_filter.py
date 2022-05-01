@@ -470,8 +470,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     file_id=file_id,
                     caption=f_caption,
                     reply_markup=MOVIE_BTNSS)
-        await query.message.reply(text=f"Hey 👋 {query.from_user.mention} 😍📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇\n📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : {title}\n⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ : {size}", reply_markup=InlineKeyboardMarkup([[
-                        InlineKeyboardButton("📥 Download Link 📥", url=f"{filess.link}")
+        await query.message.reply(text=f"""Hey 👋 {query.from_user.mention} 😍
+📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇
+📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : {title}
+⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ : {size}", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📥 Download Link 📥", url=f"{filess.link}")
                         ],[
                         InlineKeyboardButton("⚠️ Can't Access❓ Click Here ⚠️", url=f"https://t.me/{SEND_USERNAME}")
                         ]]))
