@@ -26,6 +26,8 @@ logger.setLevel(logging.ERROR)
 BUTTONS = {}
 SPELL_CHECK = {}
 FILTER_MODE = {}
+SEND_CHANNEL = int(os.environ.get("SEND_CHANNEL"))
+SEND_USERNAME = os.environ.get("USERNAME")
 
 @Client.on_message(filters.command('autofilter'))
 async def fil_mod(client, message):
@@ -419,15 +421,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
             else:
                 await client.send_cached_media(
-                    chat_id=query.from_user.id,
+                    chat_id=SEND_CHANNEL,
                     file_id=file_id,
                     caption=f_caption,
                     reply_markup=InlineKeyboardMarkup(
            [[
-           InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="HTTPS://t.me/BX_Botz")
+           InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="https://t.me/BX_Botz")
            ]]
         )
                     )
+                await query.message.reply(text=f"""Hey 👋 {query.from_user.mention} 😍
+📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇
+📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : {title}
+⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ : {size}""", reply_markup=GROUP_BUTTONS)
+                return
+
                 await query.answer('Check PM, I have sent files in pm',show_alert = True)
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !',show_alert = True)
@@ -458,15 +466,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         await query.answer()
         await client.send_cached_media(
-            chat_id=query.from_user.id,
-            file_id=file_id,
-            caption=f_caption,
-            reply_markup=InlineKeyboardMarkup(
+            chat_id=SEND_CHANNEL,
+                    file_id=file_id,
+                    caption=f_caption,
+                    reply_markup=InlineKeyboardMarkup(
            [[
            InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="https://t.me/BX_Botz")
            ]]
         )
-            )
+                    )
+                await query.message.reply(text=f"""Hey 👋 {query.from_user.mention} 😍
+📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇
+📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : {title}
+⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ : {size}""", reply_markup=GROUP_BUTTONS)
+                return
 
     elif query.data == "pages":
         await query.answer()
@@ -826,7 +839,7 @@ async def manual_filters(client, message, text=False):
                                 group_id, 
                                 reply_text,
                                 disable_web_page_preview=True,
-                                reply_markup=InlineKeyboardMarkup(button),
+                                reply_markup=(button),
                                 reply_to_message_id = reply_id
                             )
                     elif btn == "[]":
@@ -849,3 +862,10 @@ async def manual_filters(client, message, text=False):
                 break
     else:
         return False
+
+
+GROUP_BUTTONS = InlineKeyboardMarkup([[
+                        InlineKeyboardButton("📥 Download Link 📥", url=f"{filess.link}")
+                        ],[
+                        InlineKeyboardButton("⚠️ Can't Access❓ Click Here ⚠️", url=f"https://t.me/{SEND_USERNAME}")
+                        ]])
