@@ -865,5 +865,4 @@ async def manual_filters(client, message, text=False):
 MOVIE_BTNSS = InlineKeyboardMarkup(
            [[
            InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="https://t.me/BX_Botz")
-           ]]
-        )
+           ]])
