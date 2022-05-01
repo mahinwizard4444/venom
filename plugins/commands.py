@@ -306,5 +306,4 @@ async def delete_all_index_confirm(bot, message):
 MOVIE_BTNS = InlineKeyboardMarkup(
            [[
            InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="https://t.me/BX_Botz")
-           ]]
-        )
+           ]])
