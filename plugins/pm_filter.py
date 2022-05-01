@@ -424,12 +424,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat_id=SEND_CHANNEL,
                     file_id=file_id,
                     caption=f_caption,
-                    reply_markup=InlineKeyboardMarkup(
-           [[
-           InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="https://t.me/BX_Botz")
-           ]]
-        )
-                    )
+                    reply_markup=MOVIE_BTNSS)
                 await query.message.reply(text=f"""Hey 👋 {query.from_user.mention} 😍
 📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇
 📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : {title}
@@ -469,12 +464,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             chat_id=SEND_CHANNEL,
                     file_id=file_id,
                     caption=f_caption,
-                    reply_markup=InlineKeyboardMarkup(
-           [[
-           InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="https://t.me/BX_Botz")
-           ]]
-        )
-                    )
+                    reply_markup=MOVIE_BTNSS)
                 await query.message.reply(text=f"""Hey 👋 {query.from_user.mention} 😍
 📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇
 📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : {title}
@@ -869,3 +859,9 @@ GROUP_BUTTONS = InlineKeyboardMarkup([[
                         ],[
                         InlineKeyboardButton("⚠️ Can't Access❓ Click Here ⚠️", url=f"https://t.me/{SEND_USERNAME}")
                         ]])
+
+MOVIE_BTNS = InlineKeyboardMarkup(
+           [[
+           InlineKeyboardButton("🔰 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url="https://t.me/BX_Botz")
+           ]]
+        )
