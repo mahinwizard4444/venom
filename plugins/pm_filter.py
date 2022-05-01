@@ -421,7 +421,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.answer(url=f"https://t.me/FlashFilmBot?start={file_id}")
                 return
             else:
-                await client.send_cached_media(
+                filess = await client.send_cached_media(
                     chat_id=SEND_CHANNEL,
                     file_id=file_id,
                     caption=f_caption,
@@ -461,7 +461,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         await query.answer()
-        await client.send_cached_media(
+        filess = await client.send_cached_media(
             chat_id=SEND_CHANNEL,
                     file_id=file_id,
                     caption=f_caption,
