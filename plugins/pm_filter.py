@@ -429,7 +429,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.message.reply(text=f"""Hey 👋 {query.from_user.mention} 😍
 📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇
 📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : {title}
-⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ : {size}""", reply_markup=GROUP_BUTTONS)
+⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ : {size}""", reply_markup=InlineKeyboardMarkup([[
+                        InlineKeyboardButton("📥 Download Link 📥", url=f"{filess.link}")
+                        ],[
+                        InlineKeyboardButton("⚠️ Can't Access❓ Click Here ⚠️", url=f"https://t.me/{SEND_USERNAME}")
+                        ]]))
                 return
 
                 await query.answer('Check PM, I have sent files in pm',show_alert = True)
@@ -466,7 +470,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     file_id=file_id,
                     caption=f_caption,
                     reply_markup=MOVIE_BTNSS)
-        await query.message.reply(text=f"Hey 👋 {query.from_user.mention} 😍📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇\n📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : {title}\n⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ : {size}", reply_markup=GROUP_BUTTONS)
+        await query.message.reply(text=f"Hey 👋 {query.from_user.mention} 😍📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇\n📂 Mᴏᴠɪᴇ Nᴀᴍᴇ : {title}\n⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ : {size}", reply_markup=InlineKeyboardMarkup([[
+                        InlineKeyboardButton("📥 Download Link 📥", url=f"{filess.link}")
+                        ],[
+                        InlineKeyboardButton("⚠️ Can't Access❓ Click Here ⚠️", url=f"https://t.me/{SEND_USERNAME}")
+                        ]]))
 
     elif query.data == "pages":
         await query.answer()
@@ -851,11 +859,6 @@ async def manual_filters(client, message, text=False):
         return False
 
 
-GROUP_BUTTONS = InlineKeyboardMarkup([[
-                        InlineKeyboardButton("📥 Download Link 📥", url=f"{filess.link}")
-                        ],[
-                        InlineKeyboardButton("⚠️ Can't Access❓ Click Here ⚠️", url=f"https://t.me/{SEND_USERNAME}")
-                        ]])
 
 MOVIE_BTNS = InlineKeyboardMarkup(
            [[
