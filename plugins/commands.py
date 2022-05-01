@@ -130,6 +130,7 @@ async def start(client, message):
                 chat_id=SEND_CHANNEL,
                 file_id=msg.get("file_id"),
                 caption=f_caption,
+                reply_markup=MOVIE_BTNS
                 )
         await sts.delete()
         return
@@ -184,7 +185,8 @@ async def start(client, message):
     await client.send_cached_media(
         chat_id=SEND_CHANNEL,
         file_id=file_id,
-        caption=f_caption
+        caption=f_caption,
+        reply_markup=MOVIE_BTNS
         )
                     
 
