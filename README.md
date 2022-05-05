@@ -5,7 +5,7 @@
   <b>🤖 Sᴘɪᴅᴇʀ Mᴀɴ</b>
 </h1>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https:https://github.com/mahinwizard4444/venom)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https:https://github.com/mahinwizard4444/venom")
 
 ## Features
 
